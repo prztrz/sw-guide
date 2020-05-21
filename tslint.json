@@ -1,0 +1,36 @@
+{
+  "extends": ["tslint-plugin-prettier", "tslint-config-prettier"],
+  "rules": {
+    "prettier": true,
+    "no-console": [true, "log", "warn"],
+    "ordered-imports": [
+      true,
+      {
+        "no-duplicate-imports": true,
+        "grouped-imports": true,
+        "groups": [
+          {
+            "name": "react",
+            "match": "^react.*",
+            "order": 1
+          },
+          {
+            "name": "internal modules",
+            "match": "^pages*|^store*|^components*|^testUtils*|^hooks*|^utils*|^theme*",
+            "order": 3
+          },
+          {
+            "name": "realtive dirs",
+            "match": "^[.].*",
+            "order": 4
+          },
+          {
+            "name": "node_modules",
+            "match": ".*",
+            "order": 2
+          }
+        ]
+      }
+    ]
+  }
+}
