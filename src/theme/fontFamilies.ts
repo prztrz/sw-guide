@@ -1,4 +1,4 @@
 export default {
-  general: `'Roboto', sans-serif`,
-  headlines: `'Geostar', cursive;`,
-}
+  normal: `'Roboto', sans-serif`,
+  headline: `'Geostar', cursive;`,
+} as const
